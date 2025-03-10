@@ -1,15 +1,25 @@
-<div class="text-white mt-5 mb-5 min-h-screen">
-	<div class="col-centered w-10/12 md:w-8/12 lg:w-6/12 m-auto">
-		<div class="flex flex-col items-center">
-			<h1 class="text-5xl font-bold">Skills</h1>
-			<hr class="border-3 text-purple-500 w-3/12 mt-1" />
+<div class="relative text-white mt-5 mb-5 min-h-screen">
+	<div
+		class="absolute inset-0 h-full w-full bg-gray-900 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"
+	></div>
+	<div class="absolute h-full w-full bg-radial to-gray-900 z-1"></div>
+	<div class="relative col-centered w-10/12 md:w-8/12 lg:w-6/12 m-auto z-5">
+		<div class="flex flex-col items-center justify-center min-h-screen">
+			<h1 class="text-5xl font-bold fade" appViewport>Skills</h1>
+			<hr class="border-3 text-purple-500 w-3/12 mt-1 fade" appViewport />
 		</div>
 		<!-- Front-End -->
-		<h1 class="text-3xl font-bold">Front-End</h1>
-		<hr class="border-1 text-purple-500" />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+		<div class="fade" appViewport>
+			<h1 class="text-3xl font-bold">Front-End</h1>
+			<hr class="border-1 text-purple-500" />
+		</div>
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4"
+			id="front-end"
+		>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="html-logo.svg"
@@ -19,7 +29,8 @@
 				<p class="text-gray-400">Markup</p>
 			</div>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="css-logo.svg"
@@ -29,7 +40,8 @@
 				<p class="text-gray-400">Styling</p>
 			</div>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="tailwind-logo.svg"
@@ -39,7 +51,8 @@
 				<p class="text-gray-400">CSS Framework</p>
 			</div>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="bootstrap-logo.svg"
@@ -49,7 +62,8 @@
 				<p class="text-gray-400">CSS Framework</p>
 			</div>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="js-logo.svg"
@@ -59,7 +73,8 @@
 				<p class="text-gray-400">Programming Language</p>
 			</div>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="typescript-logo.svg"
@@ -69,7 +84,8 @@
 				<p class="text-gray-400">Type-Safe JavaScript</p>
 			</div>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="angular-logo.svg"
@@ -81,11 +97,18 @@
 		</div>
 
 		<!-- Back-End -->
-		<h1 class="text-3xl font-bold mt-4">Back-End</h1>
-		<hr class="border-1 text-purple-500" />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+		<div class="fade" appViewport>
+			<h1 class="text-3xl font-bold mt-4">Back-End</h1>
+			<hr class="border-1 text-purple-500" />
+		</div>
+
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4"
+			appViewport
+		>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="node-logo.svg"
@@ -97,11 +120,18 @@
 		</div>
 
 		<!-- Tools -->
-		<h1 class="text-3xl font-bold mt-4">Tools</h1>
-		<hr class="border-1 text-purple-500" />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+		<div class="fade" appViewport>
+			<h1 class="text-3xl font-bold mt-4">Tools</h1>
+			<hr class="border-1 text-purple-500" />
+		</div>
+
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4"
+			appViewport
+		>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center"
+				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				appViewport
 			>
 				<img
 					src="git-logo.svg"

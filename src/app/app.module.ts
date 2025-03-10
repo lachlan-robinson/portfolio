@@ -8,6 +8,7 @@ import { ContentComponent } from './content/content.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
+import { ViewportDirective } from './viewport.directive';
 
 @NgModule({
 	declarations: [
@@ -15,8 +16,9 @@ import { FooterComponent } from './footer/footer.component';
 		NavComponent,
 		ContentComponent,
 		SkillsComponent,
-  ProjectsComponent,
-  FooterComponent,
+		ProjectsComponent,
+		FooterComponent,
+		ViewportDirective,
 	],
 	imports: [BrowserModule, AppRoutingModule],
 	providers: [],

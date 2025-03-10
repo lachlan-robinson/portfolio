@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 import { OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +9,8 @@ import { OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 	isAtTop = true;
-	loaded = false;
 
-	ngOnInit(): void {
-		setTimeout(() => {
-			this.loaded = true;
-		}, 500);
-	}
+	ngOnInit(): void {}
 
 	@HostListener('window:scroll', [])
 	onWindowScroll() {
