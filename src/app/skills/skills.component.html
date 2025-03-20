@@ -1,8 +1,8 @@
-<div class="relative text-white mt-5 mb-5 min-h-screen">
+<div class="relative text-contrast mt-5 mb-5 min-h-screen">
 	<div
-		class="absolute inset-0 h-full w-full bg-gray-900 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"
+		class="absolute inset-0 h-full w-full bg-primary bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"
 	></div>
-	<div class="absolute h-full w-full bg-radial to-gray-900 z-1"></div>
+	<div class="absolute h-full w-full bg-radial to-primary z-1"></div>
 	<div class="relative col-centered w-10/12 md:w-8/12 lg:w-6/12 m-auto z-5">
 		<div class="flex flex-col items-center justify-center min-h-screen">
 			<h1 class="text-5xl font-bold fade" appViewport>Skills</h1>
@@ -11,95 +11,30 @@
 		<!-- Front-End -->
 		<div class="fade" appViewport>
 			<h1 class="text-3xl font-bold">Front-End</h1>
-			<hr class="border-1 text-purple-500" />
+			<hr class="border-1 text-accent" />
 		</div>
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4"
 			id="front-end"
 		>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				*ngFor="let skill of frontEndSkills"
+				class="bg-secondary p-4 rounded-lg transform transition duration-300 border-2 border-secondary hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
 				appViewport
 			>
 				<img
-					src="html-logo.svg"
+					[src]="skill.logo"
 					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
 				/>
-				<h2 class="text-xl font-bold">HTML</h2>
-				<p class="text-gray-400">Markup</p>
-			</div>
-			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
-				appViewport
-			>
-				<img
-					src="css-logo.svg"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
-				/>
-				<h2 class="text-xl font-bold">CSS</h2>
-				<p class="text-gray-400">Styling</p>
-			</div>
-			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
-				appViewport
-			>
-				<img
-					src="tailwind-logo.svg"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
-				/>
-				<h2 class="text-xl font-bold">Tailwind</h2>
-				<p class="text-gray-400">CSS Framework</p>
-			</div>
-			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
-				appViewport
-			>
-				<img
-					src="bootstrap-logo.svg"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
-				/>
-				<h2 class="text-xl font-bold">Bootstrap</h2>
-				<p class="text-gray-400">CSS Framework</p>
-			</div>
-			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
-				appViewport
-			>
-				<img
-					src="js-logo.svg"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
-				/>
-				<h2 class="text-xl font-bold">JavaScript</h2>
-				<p class="text-gray-400">Programming Language</p>
-			</div>
-			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
-				appViewport
-			>
-				<img
-					src="typescript-logo.svg"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
-				/>
-				<h2 class="text-xl font-bold">TypeScript</h2>
-				<p class="text-gray-400">Type-Safe JavaScript</p>
-			</div>
-			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
-				appViewport
-			>
-				<img
-					src="angular-logo.svg"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
-				/>
-				<h2 class="text-xl font-bold">Angular</h2>
-				<p class="text-gray-400">Front-End Framework</p>
+				<h2 class="text-xl font-bold">{{ skill.name }}</h2>
+				<p class="text-gray-400">{{ skill.description }}</p>
 			</div>
 		</div>
 
 		<!-- Back-End -->
 		<div class="fade" appViewport>
 			<h1 class="text-3xl font-bold mt-4">Back-End</h1>
-			<hr class="border-1 text-purple-500" />
+			<hr class="border-1 text-accent" />
 		</div>
 
 		<div
@@ -107,22 +42,23 @@
 			appViewport
 		>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				*ngFor="let skill of backEndSkills"
+				class="bg-secondary p-4 rounded-lg transform transition duration-300 border-2 border-secondary hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
 				appViewport
 			>
 				<img
-					src="node-logo.svg"
+					[src]="skill.logo"
 					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
 				/>
-				<h2 class="text-xl font-bold">Node.js</h2>
-				<p class="text-gray-400">JavaScript Runtime Environment</p>
+				<h2 class="text-xl font-bold">{{ skill.name }}</h2>
+				<p class="text-gray-400">{{ skill.description }}</p>
 			</div>
 		</div>
 
 		<!-- Tools -->
 		<div class="fade" appViewport>
 			<h1 class="text-3xl font-bold mt-4">Tools</h1>
-			<hr class="border-1 text-purple-500" />
+			<hr class="border-1 text-accent" />
 		</div>
 
 		<div
@@ -130,15 +66,16 @@
 			appViewport
 		>
 			<div
-				class="bg-gray-800 p-4 rounded-lg transform transition duration-300 border-2 border-gray-800 hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				*ngFor="let tool of tools"
+				class="bg-secondary p-4 rounded-lg transform transition duration-300 border-2 border-secondary hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
 				appViewport
 			>
 				<img
-					src="git-logo.svg"
+					[src]="tool.logo"
 					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
 				/>
-				<h2 class="text-xl font-bold">Git</h2>
-				<p class="text-gray-400">Version Control</p>
+				<h2 class="text-xl font-bold">{{ tool.name }}</h2>
+				<p class="text-gray-400">{{ tool.description }}</p>
 			</div>
 		</div>
 	</div>
