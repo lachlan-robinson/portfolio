@@ -38,7 +38,7 @@ export class ViewportDirective implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		console.log('🛑 Observer disconnected for', this.el.nativeElement);
+		//console.log('🛑 Observer disconnected for', this.el.nativeElement);
 		if (this.observer) {
 			this.observer.disconnect();
 		}
