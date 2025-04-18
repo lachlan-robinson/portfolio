@@ -13,141 +13,68 @@
 			class="grid grid-cols-1 xl:grid-cols-2 gap-6"
 		>
 			<div
-				class="p-4 bg-primary rounded-lg shadow-lg my-20 border-secondary border-2 transition duration-300 hover:cursor-pointer flex flex-col items-center hover:border-accent slide-up"
+				*ngFor="let project of projects"
+				class="bg-primary rounded-lg shadow-lg border-secondary border-2 transition duration-300 hover:cursor-pointer hover:border-accent slide-up overflow-hidden flex flex-col justify-between"
 				appViewport
 			>
-				<div class="p-4">
-					<div class="w-full">
-						<h1 class="text-3xl font-bold">Weather App</h1>
-						<hr class="text-accent border-1" />
-					</div>
-
-					<p class="mt-1">
-						This is a simple yet effective weather application built
-						using Angular, TypeScript, and Bootstrap. The app allows
-						users to search for weather conditions in any city using
-						the OpenWeatherMap API. It provides real-time weather
-						updates, including temperature, humidity, wind speed,
-						and a short description of the current weather.
+				<!-- Card Header -->
+				<div class="bg-secondary p-4">
+					<h1 class="text-2xl font-semibold">
+						{{ project.title }}
+					</h1>
+				</div>
+				<!-- Card Description -->
+				<div class="bg-primary px-4 my-2 grid gap-2">
+					<h1 class="text-xl font-semibold">Description</h1>
+					<p class="text-justify">
+						{{ project.description }}
 					</p>
-					<h1 class="text-xl font-bold mt-2">Features</h1>
-					<hr class="text-accent border-1" />
-					<ul class="mt-1 list-disc list-inside">
-						<li>
-							Users can enter a city name in the search bar to
-							retrieve weather data.
-						</li>
-						<li>
-							Fetches and displays current temperature, weather
-							conditions, humidity, and wind speed.
-						</li>
-						<li>
-							Uses icons from OpenWeatherMap to visually represent
-							weather conditions.
-						</li>
-						<li>
-							Uses the OpenWeatherMap API to fetch live weather
-							data.
-						</li>
-					</ul>
 				</div>
-				<div class="p-4">
-					<img src="project-img/dark.jpg" class="rounded-xl" />
+				<hr class="text-secondary border-1" />
+				<!-- Card Features -->
+				<div class="bg-primary px-4 grid gap-2 my-2">
+					<h1 class="text-xl font-semibold">Features</h1>
+					<li
+						*ngFor="let feature of project.features"
+						class="list-disk"
+					>
+						{{ feature }}
+					</li>
 				</div>
-				<div class="w-full p-4">
-					<h1 class="text-xl font-bold">Built With</h1>
-					<hr class="text-accent border-1" />
-				</div>
-				<div class="grid grid-cols-3 md:grid-cols-4 gap-2">
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="html-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">HTML</p>
-					</div>
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="bootstrap-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">Bootstrap</p>
-					</div>
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="typescript-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">Typescript</p>
-					</div>
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="angular-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">Angular</p>
-					</div>
-				</div>
-			</div>
+				<!-- Card Technologies -->
+				<hr class="text-secondary border-1" />
+				<div
+					class="bg-primary py-2 my-2 mx-4 overflow-hidden border-x-3 border-x-accent rounded-lg"
+				>
+					<div class="scroll-container flex flex-row gap-2">
+						<div
+							*ngFor="
+								let technology of project.technologies
+									.concat(project.technologies)
+									.concat(project.technologies)
+									.concat(project.technologies)
+									.concat(project.technologies)
+							"
+							class="border-secondary bg-secondary border-2 rounded-lg items-center p-2 hover:border-accent transition duration-300 hover:scale-102 flex flex-row gap-2 text-nowrap"
+						>
+							<ng-container
+								*ngIf="getTechnology(technology) as tech"
+							>
+								<div
+									class="w-6 h-6 flex items-center justify-center"
+								>
+									<img
+										[src]="tech.logo"
+										alt="{{ tech.name }}"
+										class="inline-block"
+									/>
+								</div>
 
-			<div
-				class="p-4 bg-primary rounded-lg shadow-lg my-20 border-secondary border-2 transition duration-300 hover:cursor-pointer flex flex-col items-center hover:border-accent slide-up"
-				appViewport
-			>
-				<div class="p-4">
-					<div class="w-full">
-						<h1 class="text-3xl font-bold">Personal Portfolio</h1>
-						<hr class="text-accent border-1" />
+								<p>{{ tech.name }}</p>
+							</ng-container>
+						</div>
 					</div>
-
-					<p class="mt-1">
-						My personal portfolio to demonstrate my design and
-						development capabilities.
-					</p>
-					<h1 class="text-xl font-bold mt-2">Features</h1>
-					<hr class="text-accent border-1" />
-					<ul class="mt-1 list-disc list-inside">
-						<li>Tailwind CSS for styling and design.</li>
-						<li>
-							Responsive Design for mobile and larger screens.
-						</li>
-						<li>Animation on scroll using directive.</li>
-					</ul>
-				</div>
-				<div class="p-4">
-					<img src="project-img/portfolio.jpg" class="rounded-xl" />
-				</div>
-				<div class="w-full p-4">
-					<h1 class="text-xl font-bold">Built With</h1>
-					<hr class="text-accent border-1" />
-				</div>
-				<div class="grid grid-cols-3 md:grid-cols-4 gap-2">
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="html-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">HTML</p>
-					</div>
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="css-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">CSS</p>
-					</div>
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="tailwind-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">Tailwind</p>
-					</div>
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="typescript-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">Typescript</p>
-					</div>
-					<div
-						class="flex flex-row items-center justify-center bg-secondary p-3 mr-3 rounded-full border-2 border-secondary hover:border-accent hover:cursor-pointer transition duration-300 hover:scale-102"
-					>
-						<img src="angular-logo.svg" class="w-5 mr-1" />
-						<p class="font-bold">Angular</p>
-					</div>
+					<!-- Tech Tag -->
 				</div>
 			</div>
 		</div>
