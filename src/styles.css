@@ -12,6 +12,8 @@
 	--color-contrast-dark: #fff;
 }
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 .no-view.fade {
 	opacity: 0;
 	transition: all 0.3s;
