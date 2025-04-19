@@ -1,8 +1,10 @@
-<div class="relative text-contrast mt-5 mb-5 min-h-screen">
+<div class="relative text-contrast dark:text-contrast-dark pb-5 min-h-screen">
 	<div
-		class="absolute inset-0 h-full w-full bg-primary bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"
+		class="absolute inset-0 h-full w-full bg-primary dark:bg-primary-dark bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"
 	></div>
-	<div class="absolute h-full w-full bg-radial to-primary z-1"></div>
+	<div
+		class="absolute h-full w-full bg-radial to-primary dark:to-primary-dark z-1"
+	></div>
 	<div class="relative col-centered w-10/12 md:w-8/12 lg:w-6/12 m-auto z-5">
 		<div class="flex flex-col items-center justify-center min-h-screen">
 			<h1 class="text-5xl font-bold fade" appViewport>Skills</h1>
@@ -19,12 +21,12 @@
 		>
 			<div
 				*ngFor="let skill of frontEndSkills"
-				class="bg-secondary p-4 rounded-lg transform transition duration-300 border-2 border-secondary hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				class="bg-secondary dark:bg-secondary-dark p-4 rounded-lg transform transition duration-300 border-2 border-secondary dark:border-secondary-dark hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
 				appViewport
 			>
 				<img
 					[src]="skill.logo"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
+					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1 not-dark:invert"
 				/>
 				<h2 class="text-xl font-bold">{{ skill.name }}</h2>
 				<p class="text-gray-400">{{ skill.description }}</p>
@@ -43,12 +45,12 @@
 		>
 			<div
 				*ngFor="let skill of backEndSkills"
-				class="bg-secondary p-4 rounded-lg transform transition duration-300 border-2 border-secondary hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				class="bg-secondary dark:bg-secondary-dark p-4 rounded-lg transform transition duration-300 border-2 border-secondary dark:border-secondary-dark hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
 				appViewport
 			>
 				<img
 					[src]="skill.logo"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
+					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1 not-dark:invert"
 				/>
 				<h2 class="text-xl font-bold">{{ skill.name }}</h2>
 				<p class="text-gray-400">{{ skill.description }}</p>
@@ -67,12 +69,12 @@
 		>
 			<div
 				*ngFor="let tool of tools"
-				class="bg-secondary p-4 rounded-lg transform transition duration-300 border-2 border-secondary hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
+				class="bg-secondary dark:bg-secondary-dark p-4 rounded-lg transform transition duration-300 border-2 border-secondary dark:border-secondary-dark hover:scale-105 hover:border-2 hover:border-purple-500 hover:cursor-pointer flex flex-col text-center items-center slide-up"
 				appViewport
 			>
 				<img
 					[src]="tool.logo"
-					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1"
+					class="w-2/12 md:w-3/12 lg:w-5/12 mb-1 not-dark:invert"
 				/>
 				<h2 class="text-xl font-bold">{{ tool.name }}</h2>
 				<p class="text-gray-400">{{ tool.description }}</p>

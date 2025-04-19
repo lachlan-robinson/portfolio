@@ -9,6 +9,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { ViewportDirective } from './viewport.directive';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,7 @@ import { ViewportDirective } from './viewport.directive';
 		FooterComponent,
 		ViewportDirective,
 	],
-	imports: [BrowserModule, AppRoutingModule],
+	imports: [BrowserModule, AppRoutingModule, MatSlideToggleModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })
