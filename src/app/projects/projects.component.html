@@ -1,8 +1,10 @@
-<div class="relative text-contrast min-h-screen pb-10">
+<div class="relative text-contrast dark:text-contrast-dark min-h-screen pb-10">
 	<div
-		class="absolute inset-0 h-full w-full bg-primary bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"
+		class="absolute inset-0 h-full w-full bg-primary dark:bg-primary-dark bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-0"
 	></div>
-	<div class="absolute h-full w-full bg-radial to-primary z-1"></div>
+	<div
+		class="absolute h-full w-full bg-radial to-primary dark:to-primary-dark z-1"
+	></div>
 	<div class="relative col-centered w-10/12 m-auto z-5">
 		<div class="flex flex-col items-center min-h-screen justify-center">
 			<h1 class="text-5xl font-bold mt-5 fade" appViewport>Projects</h1>
@@ -14,25 +16,29 @@
 		>
 			<div
 				*ngFor="let project of projects"
-				class="bg-primary rounded-lg shadow-lg border-secondary border-2 transition duration-300 hover:cursor-pointer hover:border-accent slide-up overflow-hidden flex flex-col justify-between"
+				class="bg-primary dark:bg-primary-dark rounded-lg shadow-lg border-secondary dark:border-secondary-dark border-2 transition duration-300 hover:cursor-pointer hover:border-accent slide-up overflow-hidden flex flex-col justify-between"
 				appViewport
 			>
 				<!-- Card Header -->
-				<div class="bg-secondary p-4">
+				<div class="bg-secondary dark:bg-secondary-dark p-4">
 					<h1 class="text-2xl font-semibold">
 						{{ project.title }}
 					</h1>
 				</div>
 				<!-- Card Description -->
-				<div class="bg-primary px-4 my-2 grid gap-2">
+				<div
+					class="bg-primary dark:bg-primary-dark px-4 my-2 grid gap-2"
+				>
 					<h1 class="text-xl font-semibold">Description</h1>
 					<p class="text-justify">
 						{{ project.description }}
 					</p>
 				</div>
-				<hr class="text-secondary border-1" />
+				<hr class="text-secondary dark:text-secondary-dark border-1" />
 				<!-- Card Features -->
-				<div class="bg-primary px-4 grid gap-2 my-2">
+				<div
+					class="bg-primary dark:bg-primary-dark px-4 grid gap-2 my-2"
+				>
 					<h1 class="text-xl font-semibold">Features</h1>
 					<li
 						*ngFor="let feature of project.features"
@@ -42,9 +48,9 @@
 					</li>
 				</div>
 				<!-- Card Technologies -->
-				<hr class="text-secondary border-1" />
+				<hr class="text-secondary dark:text-secondary-dark border-1" />
 				<div
-					class="bg-primary py-2 my-2 mx-4 overflow-hidden border-x-3 border-x-accent rounded-lg"
+					class="bg-primary dark:bg-primary-dark py-2 my-2 mx-4 overflow-hidden border-x-3 border-x-accent rounded-lg"
 				>
 					<div class="scroll-container flex flex-row gap-2">
 						<div
@@ -55,7 +61,7 @@
 									.concat(project.technologies)
 									.concat(project.technologies)
 							"
-							class="border-secondary bg-secondary border-2 rounded-lg items-center p-2 hover:border-accent transition duration-300 hover:scale-102 flex flex-row gap-2 text-nowrap"
+							class="border-secondary dark:border-secondary-dark bg-secondary dark:bg-secondary-dark border-2 rounded-lg items-center p-2 hover:border-accent transition duration-300 hover:scale-102 flex flex-row gap-2 text-nowrap"
 						>
 							<ng-container
 								*ngIf="getTechnology(technology) as tech"
@@ -66,7 +72,7 @@
 									<img
 										[src]="tech.logo"
 										alt="{{ tech.name }}"
-										class="inline-block"
+										class="inline-block not-dark:invert"
 									/>
 								</div>
 
