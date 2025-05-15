@@ -1,0 +1,15 @@
+.rotate-animate {
+	animation: rotate-animation 1s infinite ease-in-out;
+}
+
+@keyframes rotate-animation {
+	0% {
+		transform: rotate(20deg);
+	}
+	50% {
+		transform: rotate(70deg);
+	}
+	100% {
+		transform: rotate(20deg);
+	}
+}

@@ -8,10 +8,17 @@
 				Lachlan Robinson
 			</h2>
 			<button
-				class="mt-2 p-2 text-sm text-contrast dark:text-contrast-dark bg-secondary dark:bg-secondary-dark rounded-lg cursor-pointer border-2 border-secondary dark:border-secondary-dark hover:border-accent dark:hover:border-accent-dark transition duration-300 ease-in-out hover:scale-102"
+				class="font-bold p-2 bg-primary dark:bg-primary-dark border-2 dark:text-contrast-dark border-contrast dark:border-contrast-dark hover:border-accent dark:hover:border-accent-dark hover:cursor-pointer hover:scale-105 flex items-center shadow-lg slide-up transition duration-300 ease-in-out md:top-2 md:right-2 md:absolute z-10 justify-center"
 				(click)="handleClick()"
 			>
-				Toggle Theme
+				<span *ngIf="!darkmode" class="material-icons mr-2">
+					light_mode
+				</span>
+				<span *ngIf="!darkmode"> Light </span>
+				<span *ngIf="darkmode" class="material-icons mr-2">
+					dark_mode
+				</span>
+				<span *ngIf="darkmode"> Dark </span>
 			</button>
 		</div>
 	</div>
