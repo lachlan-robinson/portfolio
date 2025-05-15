@@ -8,20 +8,6 @@ import { Project } from './model/project';
 	styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
-	// The weatherApp object contains information about a weather application project.
-	weatherProject: Project = {
-		title: 'Weather App',
-		description:
-			'This is a simple yet effective weather application built using Angular, TypeScript, and Bootstrap. The app allows users to search for weather conditions in any city using the OpenWeatherMap API. It provides real-time weather updates, including temperature, humidity, wind speed, and a short description of the current weather.',
-		features: [
-			'Users can enter a city name in the search bar to retrieve weather data.',
-			'Fetches and displays current temperature, weather conditions, humidity, and wind speed.',
-			'Uses icons from OpenWeatherMap to visually represent weather conditions.',
-			'Uses the OpenWeatherMap API to fetch live weather data.',
-		],
-		imgSrc: 'project-img/dark.jpg',
-		technologies: ['HTML', 'Bootstrap', 'Typescript', 'Angular'],
-	};
 	// The portfolioApp object contains information about a portfolio website project.
 	portfolioProject: Project = {
 		title: 'Portfolio Website',
@@ -32,7 +18,8 @@ export class ProjectsComponent {
 			'Responsive Design for mobile and larger screens.',
 			'Animation on scroll using directive.',
 		],
-		imgSrc: 'project-img/portfolio.jpg',
+		imgSrc: 'project-img/portfolio-dark.png',
+		githubLink: 'https://github.com/lachlan-robinson/portfolio',
 		technologies: ['HTML', 'CSS', 'Tailwind', 'Typescript', 'Angular'],
 	};
 
@@ -45,7 +32,31 @@ export class ProjectsComponent {
 			'The backend is a Ruby on Rails project.',
 			'The deployment of the entire software stack is done with docker to improve turnaround time and portability.',
 		],
-		imgSrc: 'project-img/portfolio.jpg',
+		imgSrc: 'project-img/ontrack.svg',
+		githubLink: '',
+		technologies: [
+			'HTML',
+			'CSS',
+			'Tailwind',
+			'Typescript',
+			'Angular',
+			'Angular Material',
+			'GitHub',
+		],
+	};
+
+	todoProject: Project = {
+		title: 'Todo App',
+		description:
+			'A simple Todo application built with Angular and TypeScript.',
+		features: [
+			'Users can create, edit, and delete tasks.',
+			'Tasks can be marked as completed or pending.',
+			'Tasks are stored in local storage for persistence.',
+			'The app is responsive and works on both mobile and desktop devices.',
+		],
+		imgSrc: 'project-img/todolight.png',
+		githubLink: 'https://github.com/lachlan-robinson/angular-todo',
 		technologies: [
 			'HTML',
 			'CSS',
@@ -60,8 +71,8 @@ export class ProjectsComponent {
 	// The projects array contains the list of projects to be displayed in the component.
 	projects: Project[] = [
 		this.ontrackProject,
-		this.weatherProject,
 		this.portfolioProject,
+		this.todoProject,
 	];
 
 	// The technologies array contains the list of technologies used in the projects.
