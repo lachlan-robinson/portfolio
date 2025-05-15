@@ -18,20 +18,30 @@
 		</div>
 		<div
 			id="projects-container"
-			class="grid grid-cols-1 xl:grid-cols-2 gap-6"
+			class="columns-1 lg:columns-2 gap-6 justify-center"
 		>
 			<div
 				*ngFor="let project of projects"
-				class="bg-primary dark:bg-primary-dark shadow-lg border-contrast dark:border-contrast-dark border-2 transition duration-300 hover:cursor-pointer hover:border-accent dark:hover:border-accent-dark slide-up overflow-hidden flex flex-col justify-between"
+				class="bg-primary dark:bg-primary-dark shadow-lg border-contrast dark:border-contrast-dark border-2 transition duration-300 hover:cursor-pointer hover:border-accent dark:hover:border-accent-dark slide-up overflow-hidden flex flex-col justify-between mb-6"
 				appViewport
 			>
 				<!-- Card Header -->
 				<div
-					class="bg-contrast text-primary dark:bg-contrast-dark dark:text-primary-dark p-4"
+					class="bg-contrast text-primary dark:bg-contrast-dark dark:text-primary-dark p-4 flex flex-row justify-between items-center gap-2"
 				>
 					<h1 class="text-4xl font-[bangers]">
 						{{ project.title }}
 					</h1>
+					<a
+						[href]="project.githubLink"
+						*ngIf="project.githubLink"
+						target="_blank"
+						class="font-bold p-2 bg-primary-dark text-contrast-dark dark:bg-primary dark:text-contrast border-2 border-primary dark:border-primary-dark hover:border-accent dark:hover:border-accent-dark hover:cursor-pointer hover:scale-105 flex flex-row items-center shadow-lg slide-up transition duration-300 ease-in-out"
+						appViewport
+					>
+						<span class="material-icons mr-1"> open_in_new </span>
+						Repo
+					</a>
 				</div>
 				<!-- Card Description -->
 				<div
@@ -42,6 +52,15 @@
 						{{ project.description }}
 					</p>
 				</div>
+				<div class="flex justify-center">
+					<img
+						*ngIf="project.imgSrc"
+						[src]="project.imgSrc"
+						alt="{{ project.title }}"
+						class="max-w-10/12 p-4"
+					/>
+				</div>
+
 				<hr class="text-contrast dark:text-contrast-dark border-1" />
 				<!-- Card Features -->
 				<div
